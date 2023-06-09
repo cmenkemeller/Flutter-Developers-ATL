@@ -11,7 +11,7 @@ class NavigationLayout extends StatefulWidget {
   NavigationLayout({Key? key, required this.child}) : super(key: key);
 
   @override
-  _NavigationLayoutState createState() => _NavigationLayoutState();
+  State<NavigationLayout> createState() => _NavigationLayoutState();
 }
 
 class _NavigationLayoutState extends State<NavigationLayout> {
@@ -52,7 +52,7 @@ class _NavigationLayoutState extends State<NavigationLayout> {
   Widget _buildMobileAppBar(BuildContext context) {
     return AppBar(
       title: Logo(
-        color: PRIMARY,
+        color: primaryColor,
       ),
       centerTitle: true,
     );
@@ -64,7 +64,7 @@ class _NavigationLayoutState extends State<NavigationLayout> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Logo(
-            color: PRIMARY,
+            color: primaryColor,
           ),
           _buildRowNav(),
         ],
@@ -105,10 +105,10 @@ class _NavigationLayoutState extends State<NavigationLayout> {
           DrawerHeader(
               padding: EdgeInsets.zero,
               child: Container(
-                  color: PRIMARY,
+                  color: primaryColor,
                   child: Center(
                     child: Logo(
-                      color: OFF_WHITE,
+                      color: offWhiteColor,
                     ),
                   ))),
           ListView.builder(
@@ -131,8 +131,9 @@ class _NavigationLayoutState extends State<NavigationLayout> {
 
   void _handleNavItem(_NavigationItem item) {
     if (item.route == '/source-code') {
-      launchUrl(Uri.parse('https://github.com/emmett-deen/Flutter-Developers-ATL'));
-    }else if(item.route == '/feedback'){
+      launchUrl(
+          Uri.parse('https://github.com/emmett-deen/Flutter-Developers-ATL'));
+    } else if (item.route == '/feedback') {
       launchUrl(Uri.parse('https://forms.gle/d5eAkA7E1mgTquZGA'));
     } else {
       Navigator.of(context).pushNamed(item.route);

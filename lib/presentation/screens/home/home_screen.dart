@@ -8,7 +8,7 @@ class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildNextEvent() {
     return Container(
-      color: GREY,
+      color: greyColor,
       height: 500,
       child: Center(
         child: Padding(
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall
-                      ?.copyWith(color: OFF_WHITE),
+                      ?.copyWith(color: offWhiteColor),
                 ),
               ),
               Container(

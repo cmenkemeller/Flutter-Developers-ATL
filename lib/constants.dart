@@ -25,11 +25,11 @@ Map<int, Color> color = {
   800: Color.fromRGBO(3, 115, 140, .9),
   900: Color.fromRGBO(3, 115, 140, 1),
 };
-MaterialColor PRIMARY_SWATCH = MaterialColor(0xff03738c, color);
-Color PRIMARY = Color(0xff03738c);
-Color PRIMARY_DARK = Color(0xff00475f);
-Color PRIMARY_LIGHT = Color(0xff4da2bc);
-Color ACCENT = Color(0xff024959);
-Color GREY = Color(0xffa3babf);
-Color OFF_WHITE = Color(0xfff2f2f2);
-Color DARK = Color(0xff011F26);
+MaterialColor primarySwatch = MaterialColor(0xff03738c, color);
+Color primaryColor = Color(0xff03738c);
+Color primaryDarkColor = Color(0xff00475f);
+Color primaryLightColor = Color(0xff4da2bc);
+Color accentColor = Color(0xff024959);
+Color greyColor = Color(0xffa3babf);
+Color offWhiteColor = Color(0xfff2f2f2);
+Color darkColor = Color(0xff011F26);

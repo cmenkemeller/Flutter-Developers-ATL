@@ -8,7 +8,7 @@ class UnderConstructionScreen extends StatefulWidget {
   UnderConstructionScreen({Key? key}) : super(key: key);
 
   @override
-  _UnderConstructionScreenState createState() =>
+  State<UnderConstructionScreen> createState() =>
       _UnderConstructionScreenState();
 }
 
@@ -26,7 +26,7 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Logo(
-            color: PRIMARY,
+            color: primaryColor,
             height: 64,
           ),
           Padding(
@@ -45,7 +45,8 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen> {
               icon: FaIcon(FontAwesomeIcons.github),
               label: Text('Contribute on GitHub'),
               onPressed: () {
-                launchUrl(Uri.parse('https://github.com/emmett-deen/Flutter-Developers-ATL'));
+                launchUrl(Uri.parse(
+                    'https://github.com/emmett-deen/Flutter-Developers-ATL'));
               },
             ),
           )

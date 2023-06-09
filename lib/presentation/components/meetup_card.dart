@@ -10,7 +10,7 @@ class MeetupCard extends StatefulWidget {
   MeetupCard({Key? key}) : super(key: key);
 
   @override
-  _MeetupCardState createState() => _MeetupCardState();
+  State<MeetupCard> createState() => _MeetupCardState();
 }
 
 class _MeetupCardState extends State<MeetupCard> {
@@ -33,12 +33,12 @@ class _MeetupCardState extends State<MeetupCard> {
                         Text(
                           data.dateTime,
                           style: TextStyle(
-                              color: PRIMARY_LIGHT,
+                              color: primaryLightColor,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          data.attending + ' attendees',
-                          style: TextStyle(color: GREY),
+                          '${data.attending} attendees',
+                          style: TextStyle(color: greyColor),
                         )
                       ],
                     ),
@@ -49,7 +49,7 @@ class _MeetupCardState extends State<MeetupCard> {
                           Text(
                             data.title,
                             style: TextStyle(
-                                color: DARK,
+                                color: darkColor,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           )
@@ -60,11 +60,11 @@ class _MeetupCardState extends State<MeetupCard> {
                       children: [
                         Icon(
                           Icons.location_on,
-                          color: GREY,
+                          color: greyColor,
                         ),
                         Text(
                           data.location,
-                          style: TextStyle(color: GREY),
+                          style: TextStyle(color: greyColor),
                         )
                       ],
                     ),

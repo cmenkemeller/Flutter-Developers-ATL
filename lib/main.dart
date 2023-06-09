@@ -14,23 +14,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Developers ATL',
       theme: ThemeData(
-          primarySwatch: PRIMARY_SWATCH,
-          textTheme: TextTheme().apply(bodyColor: DARK, displayColor: DARK),
+          primarySwatch: primarySwatch,
+          textTheme: TextTheme().apply(bodyColor: darkColor, displayColor: darkColor),
           textButtonTheme: TextButtonThemeData(
               style: ButtonStyle(
                   textStyle: MaterialStateProperty.all(
                       TextStyle(fontWeight: FontWeight.bold)))),
           appBarTheme: AppBarTheme(
-              backgroundColor: OFF_WHITE,
-              foregroundColor: PRIMARY,
-              iconTheme: IconThemeData(color: PRIMARY))),
+              backgroundColor: offWhiteColor,
+              foregroundColor: primaryColor,
+              iconTheme: IconThemeData(color: primaryColor))),
       onGenerateRoute: (settings) {
-        for (var route in ROUTES) {
+        for (var route in routes) {
           if (route.matches(settings)) {
             return route.build(settings);
           }
         }
-        return ROUTES.first.build(RouteSettings(name: '/'));
+        return routes.first.build(RouteSettings(name: '/'));
       },
     );
   }

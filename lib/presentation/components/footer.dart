@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 150,
-      color: DARK,
+      color: darkColor,
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -24,7 +24,7 @@ class Footer extends StatelessWidget {
                   Text(
                     'In Collaboration With',
                     style: TextStyle(
-                        color: OFF_WHITE,
+                        color: offWhiteColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 16),
                   ),
